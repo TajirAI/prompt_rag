@@ -32,8 +32,7 @@ def save_form_data(data):
         json.dump(data, file)
 
 def form_page():
-    # Set page config
-    st.set_page_config(page_title="Bot Configuration", page_icon="💬")
+
 
     # Display the title and description
     st.title("Bot Configuration")
@@ -89,4 +88,6 @@ def form_page():
                 st.success(f"Thank you, {name}! We have received your submission.")
 
 if __name__ == "__main__":
+    # Set page config when run directly
+    st.set_page_config(page_title="Bot Configuration", page_icon="💬")
     form_page()

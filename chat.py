@@ -111,6 +111,13 @@ class EnhancedChatbot:
                 st.write(response)
 
 # Run chatbot
+# Run chatbot
 if __name__ == "__main__":
-    obj = EnhancedChatbot()
-    obj.main()
+    # Check if the form page is being accessed
+    query_params = st.query_params  # Access query_params directly, not as a function
+    if "page" in query_params and query_params["page"] == "prompt":
+        from form_page import form_page
+        form_page()
+    else:
+        obj = EnhancedChatbot()
+        obj.main()

@@ -66,7 +66,7 @@ class EnhancedChatbot:
         DigitEarn Guide: [Respond naturally in Romanized Urdu]
         """
         self.PROMPT = PromptTemplate(input_variables=["history", "input"], template=template)
-        self.memory = ConversationSummaryBufferMemory(llm=self.llm, max_token_limit=25, human_prefix="Client", verbose=False)  # Memory will store full conversation history
+        self.memory = ConversationSummaryBufferMemory(llm=self.llm, max_token_limit=250, human_prefix="Client", verbose=False)  # Memory will store full conversation history
 
     def setup_chain(self):
         # Define a prompt template for the conversation chain
